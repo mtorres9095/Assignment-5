@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
       let copilotNameInput = document.querySelector("input[name=copilotName]");
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
       let cargoMassInput = document.querySelector("input[name=cargoMass]");
-      if (pilotNameInput.value === "" || copilotNameInput.value === "" ||isNaN(fuelLevelInput) || isNaN(cargoMassInput) ) {
+      if (pilotNameInput.value === "" || copilotNameInput.value === "" ||Number.isNaN(fuelLevelInput) || Number.isNaN(cargoMassInput) ) {
          alert("All fields are required!");
          event.preventDefault();
 
