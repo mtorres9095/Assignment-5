@@ -6,9 +6,14 @@ window.addEventListener("load", function() {
       let copilotNameInput = document.querySelector("input[name=copilotName]");
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
       let cargoMassInput = document.querySelector("input[name=cargoMass]");
+
       let items = document.getElementById("faultyItems");
       let pilotStatus = document.getElementById("pilotStatus");
       let copilotStatus = document.getElementById("copilotStatus");
+      let fuelStatus = document.getElementById("fuelStatus");
+      let cargoStatus = document.getElementById("cargoStatus");
+      let launchStatus = document.getElementById("launchStatus");
+      let ready = true;
 
       // alert(copilotNameInput.value, fuelLevelInput.value);
       if (pilotNameInput.value === "" || copilotNameInput.value === "" ||Number.isNaN(fuelLevelInput) || Number.isNaN(cargoMassInput) ) {
@@ -19,6 +24,12 @@ window.addEventListener("load", function() {
          items.style.visibility = "visible";
          pilotStatus.innerHTML = `Pilot ${pilotNameInput} is ready for launch`
          copilotStatus.innerHTML = `Co-pilot ${copilotNameInput} is ready for launch`
+
+         if (fuelLevelInput <10000) {
+            fuelStatus.innerHTML = "There is not enough fuel for the Journey";
+            launchStatus.innerHTML = "Shuttle not ready for launch";
+
+         }
 
 
       }
