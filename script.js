@@ -6,9 +6,20 @@ window.addEventListener("load", function() {
       let copilotNameInput = document.querySelector("input[name=copilotName]");
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
       let cargoMassInput = document.querySelector("input[name=cargoMass]");
+      let items = document.getElementById("faultyItems");
+      let pilotStatus = document.getElementById("pilotStatus");
+      let copilotStatus = document.getElementById("copilotStatus");
+
+      // alert(copilotNameInput.value, fuelLevelInput.value);
       if (pilotNameInput.value === "" || copilotNameInput.value === "" ||Number.isNaN(fuelLevelInput) || Number.isNaN(cargoMassInput) ) {
          alert("All fields are required!");
          event.preventDefault();
+
+      } else{
+         items.style.visibility = "visible";
+         pilotStatus.innerHTML = `Pilot ${pilotNameInput} is ready for launch`
+         copilotStatus.innerHTML = `Co-pilot ${copilotNameInput} is ready for launch`
+
 
       }
    });
