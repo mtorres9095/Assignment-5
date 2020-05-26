@@ -17,7 +17,6 @@ window.addEventListener("load", function() {
       let cargoStatus = document.getElementById("cargoStatus");
       let launchStatus = document.getElementById("launchStatus");
       
-
       // alert(copilotNameInput.value, fuelLevelInput.value);
       if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === ""|| cargoMassInput.value === "")  {
                alert("All fields are required!");
@@ -51,8 +50,7 @@ window.addEventListener("load", function() {
                               cargoStatus.innerHTML = "Cargo mass low enough for launch";
                               launchStatus.innerHTML = "Shuttle is ready for launch";
                               launchStatus.style.backgroundColor = "green";
-                              
-                       }   else {
+                        }   else {
                             launchStatus.innerHTML = "Shuttle is NOT ready for launch";
                             launchStatus.style.backgroundColor = "red";
                        }
